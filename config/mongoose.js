@@ -4,7 +4,6 @@ require("dotenv").config();
 
 const DB = process.env.MONGO_DB_URL;
 
-// These set of line can be written in async await fashion, but I have followed the documentation. 
 mongoose.connect(DB).then(()=>{
      console.log('connection successful');
  }).catch((err) => console.log("no connection " + err));
